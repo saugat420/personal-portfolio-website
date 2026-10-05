@@ -1,0 +1,8 @@
+.wrap { overflow: hidden; border-block: 1px solid #2c2812; background: var(--yellow); color: #090909; transform: rotate(-.6deg) scale(1.01); transform-origin: center; }
+.track { display: flex; width: max-content; animation: ticker 26s linear infinite; }
+.group { display: flex; align-items: center; flex: none; }
+.group span { display: flex; align-items: center; gap: 22px; padding: 15px 22px; font-size: .74rem; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.group b { font-size: .95rem; }
+.wrap:hover .track { animation-play-state: paused; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .track { animation: none; } .wrap { transform: none; } }

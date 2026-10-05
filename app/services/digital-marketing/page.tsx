@@ -1,0 +1,2 @@
+import { ServicePage } from "@/components/ServicePage";import { services } from "@/data/services";import { pageMetadata } from "@/lib/metadata";
+const service=services.find(s=>s.slug==="digital-marketing")!;export const metadata=pageMetadata("Digital Marketing Consultant & Strategy",service.short,"/services/digital-marketing");export default function Page(){return <ServicePage service={service}/>}

@@ -1,0 +1,6 @@
+.wrap { border: 1px solid #3b3616; border-radius: 24px; background-color: #14130d; padding: clamp(30px, 6vw, 70px); display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, .6fr); gap: 40px; align-items: end; overflow: hidden; }
+.action { display: flex; flex-direction: column; gap: 15px; align-items: flex-start; }
+.action span { color: #aaa; font-size: .8rem; display: flex; gap: 7px; }
+.action svg { color: var(--yellow); }
+@media (max-width: 780px) { .wrap { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .action, .action a { width: 100%; } }

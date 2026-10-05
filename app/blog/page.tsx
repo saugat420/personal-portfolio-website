@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { CTASection } from "@/components/CTASection";
+import { PageHero } from "@/components/PageHero";
+import { posts } from "@/data/posts";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata=pageMetadata("Practical Digital Marketing Ideas","Simple guides and strategies about AI, advertising, content, automation and digital marketing—with no unnecessary jargon.","/blog");
+export default function Blog(){const cats=["All","AI Marketing","Meta Ads","Content Marketing","AI Automation","Websites","Digital Marketing"];return <><PageHero eyebrow="Practical marketing insights" title="Practical Ideas to Help You Market Smarter" copy="Simple guides and strategies about AI, advertising, content, automation and digital marketing. No unnecessary jargon. Just practical ideas you can use to improve your marketing."/><section className="section"><div className="container"><div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:38}}>{cats.map((x,i)=><span key={x} style={{padding:"9px 13px",borderRadius:999,border:`1px solid ${i===0?"#ffd400":"#333"}`,color:i===0?"#ffd400":"#999",fontSize:12}}>{x}</span>)}</div><div className="grid-3">{posts.map(p=><article className="card" key={p.slug}><span className="eyebrow" style={{fontSize:10}}>{p.category}</span><h2 style={{fontSize:"1.25rem",lineHeight:1.35,margin:"22px 0 10px"}}><Link href={`/blog/${p.slug}`}>{p.title}</Link></h2><p className="muted">{p.description}</p><small style={{color:"#666"}}>{new Date(p.date).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})} · {p.readingTime}</small><Link href={`/blog/${p.slug}`} style={{display:"flex",gap:7,alignItems:"center",color:"#ffd400",fontWeight:800,fontSize:13,marginTop:24}}>Read Article <ArrowRight size={15}/></Link></article>)}</div></div></section><CTASection/></>}

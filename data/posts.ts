@@ -1,0 +1,47 @@
+export const posts = [
+  {
+    slug: "what-is-ai-marketing",
+    title: "What Is AI Marketing—and Where Does It Actually Help?",
+    description: "A practical guide to using AI alongside sound marketing strategy, without chasing every new tool.",
+    date: "2026-09-18",
+    category: "AI Marketing",
+    readingTime: "6 min read",
+    keywords: ["AI marketing", "AI marketing strategy"],
+    sections: [
+      ["What AI marketing means", "AI marketing is the use of artificial intelligence alongside traditional marketing strategy to improve research, content creation, advertising, personalization, automation and analysis."],
+      ["Where AI creates practical value", "AI is most useful when it speeds up repeatable work, helps teams examine information faster, or makes timely personalization possible. It should support a clear customer strategy rather than become the strategy itself."],
+      ["What AI cannot fix", "AI cannot rescue an unclear offer, weak positioning or a poor understanding of the customer. Those fundamentals still require thoughtful decisions, real market feedback and human judgment."],
+      ["A sensible place to start", "Choose one recurring bottleneck, define the result you need, and test a small workflow. Measure its accuracy and time savings before expanding it across the business."],
+    ],
+  },
+  {
+    slug: "meta-ads-before-you-spend",
+    title: "5 Things to Fix Before You Spend More on Meta Ads",
+    description: "Before increasing your budget, make sure the foundations of your customer acquisition system are working.",
+    date: "2026-09-08",
+    category: "Meta Ads",
+    readingTime: "7 min read",
+    keywords: ["Meta Ads", "Facebook advertising"],
+    sections: [
+      ["Start with the offer", "More budget amplifies what already exists. Make sure the offer is relevant, specific and easy for your ideal customer to understand."],
+      ["Check the message", "Your creative and copy should make the problem, promise and next step immediately clear without relying on vague claims."],
+      ["Review the destination", "A slow or confusing landing page wastes qualified attention. Keep the page focused and make the action simple on mobile."],
+      ["Plan the follow-up", "Leads lose value when the response is slow or inconsistent. Decide who follows up, when they do it and what information they need."],
+    ],
+  },
+  {
+    slug: "simple-content-system",
+    title: "A Simple Content System for Busy Business Owners",
+    description: "How to create useful, consistent content without making content production your full-time job.",
+    date: "2026-08-27",
+    category: "Content Marketing",
+    readingTime: "5 min read",
+    keywords: ["content marketing system", "business content strategy"],
+    sections: [
+      ["Build around customer questions", "Use real sales conversations, objections and support questions as your raw material. This keeps content grounded in what customers actually care about."],
+      ["Choose repeatable formats", "A small number of familiar formats makes publishing easier and helps your audience know what to expect."],
+      ["Create once, distribute thoughtfully", "Turn one strong idea into a useful article, short posts and a video outline. Adapt the format instead of copying the same text everywhere."],
+      ["Measure useful signals", "Look beyond reach. Track qualified replies, website visits, conversations and the questions prospects ask after seeing your content."],
+    ],
+  },
+] as const;

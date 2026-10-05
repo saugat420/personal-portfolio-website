@@ -1,0 +1,9 @@
+"use client";
+
+import { useState } from "react";
+import styles from "./ContactForm.module.css";
+
+export function ContactForm() {
+  const [sending,setSending]=useState(false);
+  return <form className={styles.form} action="https://formsubmit.co/saugatraina01@gmail.com" method="POST" onSubmit={()=>setSending(true)}><input type="hidden" name="_subject" value="New marketing consultation request from Digital Saugat"/><input type="hidden" name="_template" value="table"/><div className={styles.honeypot} aria-hidden="true"><label>Company website<input name="_honey" tabIndex={-1} autoComplete="off"/></label></div><div className={styles.row}><label>Full Name *<input name="name" autoComplete="name" required minLength={2}/></label><label>Business Name<input name="business" autoComplete="organization"/></label></div><div className={styles.row}><label>Email *<input name="email" type="email" autoComplete="email" required/></label><label>Phone / WhatsApp<input name="phone" type="tel" autoComplete="tel"/></label></div><label>Website<input name="website" type="url" placeholder="https://"/></label><label>What would you like help with?<select name="service" defaultValue="Not Sure Yet"><option>Meta Ads</option><option>Content Marketing</option><option>AI Automation</option><option>Website / Landing Page</option><option>Digital Marketing</option><option>Not Sure Yet</option></select></label><label>What&apos;s your biggest marketing challenge right now? *<textarea name="challenge" required minLength={10} rows={5}/></label><label>What would you like to achieve in the next 3–6 months?<textarea name="goal" rows={4}/></label><button className="btn btn-primary" type="submit" disabled={sending}>{sending?"Sending…":"Get My Free Marketing Plan"}</button><p className={styles.note}>I&apos;ll review your information before our consultation so we can make the conversation more useful.</p></form>;
+}

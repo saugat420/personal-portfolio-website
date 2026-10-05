@@ -1,0 +1,2 @@
+import { ServicePage } from "@/components/ServicePage";import { services } from "@/data/services";import { pageMetadata } from "@/lib/metadata";
+const service=services.find(s=>s.slug==="website-landing-page-design")!;export const metadata=pageMetadata("Conversion Website & Landing Page Design",service.short,"/services/website-landing-page-design");export default function Page(){return <ServicePage service={service}/>}

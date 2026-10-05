@@ -1,0 +1,13 @@
+.footer { border-top: 1px solid var(--line); padding: 68px 0 28px; background: #0b0b0b; }
+.grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 54px; }
+.grid > div { display: flex; flex-direction: column; gap: 12px; }
+.brand { display: inline-flex; align-items: center; }
+.brand img { display: block; width: 220px; height: auto; }
+.grid p { color: var(--muted); line-height: 1.7; max-width: 380px; }
+.grid h2 { font-size: .78rem; color: white; text-transform: uppercase; letter-spacing: .14em; margin: 0 0 8px; }
+.grid a:not(.brand) { color: var(--muted); font-size: .9rem; }
+.grid a:hover { color: white; }
+.bottom { border-top: 1px solid var(--line); margin-top: 54px; padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; color: #777; font-size: .8rem; }
+.bottom span:last-child { display: flex; gap: 18px; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; gap: 36px; } .bottom { flex-direction: column; } }
